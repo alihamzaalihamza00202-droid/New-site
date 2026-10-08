@@ -57,12 +57,12 @@
 
 <script>
 const OWNER_PHONE = "923046761516";
-let ADMIN_EMAIL = localStorage.getItem('sh_admin_email') || "alihamzaalihamza00202@gmail.com";
+let ADMIN_EMAIL = localStorage.getItem('sh_admin_email') || "alihamzaalihamza0030@gmail.com";
 let currentUser = JSON.parse(localStorage.getItem('sh_current'))||null;
 let users = JSON.parse(localStorage.getItem('sh_users'))||[];
 let siteSettings = JSON.parse(localStorage.getItem('sh_site_settings')) || {name:"AtrVault.pk", heroTitle:"Pakistan's Trusted<br>Perfume & Watches Marketplace"};
 let defaultProducts = [
-{name:"J. Janan Gold - Men",price:2200,cat:"men",seller:"J. Fragrances",city:"Karachi",desc:"Original J. - 12 hours lasting, local brand",phone:"923004567890",payments:["JazzCash","COD"],payDetails:{JazzCash:"03004567890 - J. Store",COD:"COD"},img:"https://images.unsplash.com/photo-1594035910387-fea47794261f?w=400",status:"approved"},
+{name:"J. Janan Gold - Men",price:2200,cat:"men",seller:"J. Fragrances",city:"Karachi",desc:"Original J. - 12 hours lasting, local brand",phone:"9230046761516",payments:["JazzCash","COD"],payDetails:{JazzCash:"03004567890 - J. Store",COD:"COD"},img:"https://images.unsplash.com/photo-1594035910387-fea47794261f?w=400",status:"approved"},
 {name:"Bonanza Satrangi - Women Bloom",price:1850,cat:"women",seller:"Bonanza Official",city:"Lahore",desc:"Original Bonanza - Floral, local brand",phone:"923112345678",payments:["Easypaisa","COD"],payDetails:{Easypaisa:"03112345678",COD:"COD"},img:"https://images.unsplash.com/photo-1541643600914-78b084683601?w=400",status:"approved"},
 {name:"Saeed Ghani - Amber Oud Attar 12ml",price:1200,cat:"attar",seller:"Saeed Ghani",city:"Multan",desc:"12ml Pure Attar - Pakistani Brand",phone:"923009876543",payments:["JazzCash"],payDetails:{JazzCash:"03009876543"},img:"https://images.unsplash.com/photo-1588405748880-12d1d2a59f75?w=400",status:"approved"},
 {name:"Service Watch - Executive Steel",price:7500,cat:"men-watch",seller:"Service Watches Lahore",city:"Lahore",desc:"Original Service Watch - Steel Chain, Waterproof",phone:"923334445555",payments:["JazzCash","COD"],payDetails:{JazzCash:"03334445555 - Service Lahore"},img:"https://images.unsplash.com/photo-1524805444973-bfccaadfaec2?w=400",status:"approved"},
