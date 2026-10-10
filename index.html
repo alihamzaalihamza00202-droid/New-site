@@ -1,0 +1,322 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title id="siteTitleTag">AtrVault.pk - Luxury</title>
+<script src="https://cdn.tailwindcss.com"></script>
+<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;600;800&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
+<style>body{font-family:'Outfit',sans-serif;background:#f8f6f0}.playfair{font-family:'Playfair Display',serif}.no-scrollbar::-webkit-scrollbar{display:none}</style>
+</head>
+<body id="mainBody">
+<div class="bg-[#0B0F1A] text-[#C5A059] text-[11px] text-center py-2">✨ LUXURY | <span id="topWebsite">AtrVault.pk</span> | <span id="topAcc">03340686649</span> </div>
+<header class="sticky top-0 z-40 bg-white/95 backdrop-blur border-b border-[#C5A059]/20"><div class="max-w-7xl mx-auto px-4 py-3 flex justify-between items-center">
+<div class="flex items-center gap-3"><div id="logoBox" class="w-11 h-11 bg-[#0B0F1A] text-[#C5A059] rounded-full flex items-center justify-center font-bold border-2 border-[#C5A059] overflow-hidden"><span id="logoLetter">A</span><img id="logoImg" class="hidden w-full h-full object-cover"></div><div><h1 id="siteNameHead" class="playfair font-bold text-lg">AtrVault.pk</h1><p id="siteUrlHead" class="text-[10px] text-[#C5A059] font-bold">LUXURY STORE</p></div></div>
+<div class="flex gap-2 items-center">
+<input id="searchInput" oninput="searchProducts()" placeholder="Search..." class="hidden md:block bg-gray-100 rounded-full px-4 py-2 text-xs w-48">
+<button onclick="openWishlist()" class="w-10 h-10 border rounded-full relative"><i class="fa-regular fa-heart"></i><span id="wishCount" class="absolute -top-1 -right-1 bg-[#C5A059] text-white text-[10px] w-5 h-5 rounded-full flex items-center justify-center">0</span></button>
+<button id="adminBtn" onclick="openAdmin()" class="hidden bg-red-600 text-white px-3 py-2 rounded-full text-xs">Admin <span id="pendingCount" class="bg-white text-red-600 px-2 rounded-full">0</span></button>
+<button id="authBtn" onclick="openAuth()" class="bg-[#0B0F1A] text-[#C5A059] border border-[#C5A059] px-5 py-2 rounded-full text-sm font-bold">Login / Signup</button>
+<button id="cartBtn" onclick="openCart()" class="hidden w-10 h-10 bg-[#0B0F1A] text-[#C5A059] rounded-full relative"><i class="fa-solid fa-bag-shopping"></i><span id="cartCount" class="absolute -top-1 -right-1 bg-[#C5A059] text-black text-[10px] w-5 h-5 rounded-full flex items-center justify-center">0</span></button>
+<button id="menuBtn" onclick="toggleMenu()" class="w-10 h-10 bg-black text-[#C5A059] border border-[#C5A059] rounded-full flex items-center justify-center"><i class="fa-solid fa-bars"></i></button>
+</div></div></header>
+
+<div id="sideMenu" class="fixed inset-0 z-[90] hidden"><div onclick="closeMenu()" class="absolute inset-0 bg-black/50"></div><div class="absolute right-0 top-0 h-full w-[300px] bg-white shadow-2xl p-5 overflow-auto"><div class="flex justify-between items-center mb-6"><h3 class="font-bold text-lg">Menu - AtrVault.pk</h3><button onclick="closeMenu()" class="w-8 h-8 bg-black text-white rounded-full">X</button></div>
+<button onclick="goHome(); closeMenu()" class="w-full bg-[#0B0F1A] text-[#C5A059] border border-[#C5A059] py-3 rounded-full text-sm font-bold mb-4"><i class="fa-solid fa-house"></i> Home</button>
+<div id="menuContent" class="space-y-3"></div>
+</div></div><div id="publicLanding" class="max-w-7xl mx-auto px-4 py-6">
+<div id="heroBox" class="bg-[#0B0F1A] text-white rounded-[2rem] p-8 md:p-12 relative overflow-hidden border border-[#C5A059]/20"><div id="heroImgOverlay" class="absolute inset-0 opacity-20 bg-cover bg-center" style="background-image:url('https://images.unsplash.com/photo-1594035910387-fea47794261f?w=1200')"></div><div class="absolute inset-0 bg-gradient-to-r from-[#0B0F1A] to-transparent"></div><div class="relative z-10"><p class="text-[#C5A059] text-xs font-bold tracking-widest mb-2">✦2026 LUXURY STORE✦</p><h2 class="playfair text-4xl md:text-5xl leading-tight" id="heroTitle">Pakistan's Most<br>Trusted <span class="text-[#C5A059]">Luxury<br>Perfume & Watches</span></h2><p class="mt-4 text-white/60 max-w-xl text-[13px]" id="heroDesc">All Original Brands. 100% Authentic. Buyer Protection.</p>
+<div class="mt-6 bg-white/10 backdrop-blur border border-[#C5A059]/30 rounded-2xl p-4 max-w-sm"><div class="flex items-center gap-2"><div class="flex text-[#C5A059] text-[13px]">⭐⭐⭐⭐⭐</div><p class="text-[13px] font-bold text-[#C5A059]">4.9/5 - 15,000+ Luxury Buyers</p></div><p class="text-[11px] text-white/60 mt-1">100% Original | Buyer Protection | Fast COD</p></div>
+<button onclick="openAuth()" class="mt-6 bg-[#C5A059] text-black px-7 py-3.5 rounded-full font-bold text-sm">Shop Now - Join for Free</button>
+</div></div>
+</div>
+
+<div id="privateContent" class="hidden max-w-7xl mx-auto px-4"><div class="bg-white border border-[#C5A059]/20 rounded-[1.5rem] p-4 mt-4 mb-4"><div class="flex justify-between items-center mb-3"><p class="text-sm font-bold">Filter Luxury With Premium Collection</p><p id="roleBadge" class="text-xs bg-[#0B0F1A] text-[#C5A059] border border-[#C5A059] px-4 py-1.5 rounded-full font-bold"></p></div><div class="flex gap-2 overflow-auto no-scrollbar" id="catBar"><button onclick="filterCat('all')" data-cat="all" class="filter-btn bg-[#0B0F1A] text-[#C5A059] border border-[#C5A059] px-4 py-2 rounded-full text-xs font-bold">All</button><button onclick="filterCat('men')" data-cat="men" class="filter-btn bg-white border px-4 py-2 rounded-full text-xs">Men Perfume</button><button onclick="filterCat('women')" data-cat="women" class="filter-btn bg-white border px-4 py-2 rounded-full text-xs">Women</button><button onclick="filterCat('attar')" data-cat="attar" class="filter-btn bg-white border px-4 py-2 rounded-full text-xs">Attar</button><button onclick="filterCat('watch')" data-cat="watch" class="filter-btn bg-white border px-4 py-2 rounded-full text-xs">Watches</button><button onclick="filterCat('men-watch')" data-cat="men-watch" class="filter-btn bg-white border px-4 py-2 rounded-full text-xs">Men Watches</button></div></div><div id="products" class="grid grid-cols-2 md:grid-cols-4 gap-4 pb-32"></div></div><div id="authModal" class="fixed inset-0 z-50 hidden bg-black/60 flex items-center justify-center p-4"><div class="bg-white rounded-[2rem] w-full max-w-md p-6 max-h-[95vh] overflow-auto">
+<div class="flex justify-between mb-3"><div><h3 id="authSiteName" class="playfair text-xl font-bold">AtrVault.pk</h3><p id="authSiteUrl" class="text-[10px] text-[#C5A059] font-bold">LUXURY STORE</p></div><button onclick="closeAuth()" class="w-8 h-8 bg-black text-white rounded-full">X</button></div>
+<div class="bg-[#0B0F1A] border border-[#C5A059]/30 rounded-2xl p-3 mb-4 text-white"><p class="text-xs font-bold text-[#C5A059]">15,000+ Luxury Buyers & Trusted Sellers</p><p class="text-[11px] text-white/60 mt-1">Original Brands - Buyer Protection - COD</p></div>
+<div class="flex bg-[#0B0F1A] rounded-full p-1 mb-4"><button id="loginTab" onclick="switchAuth('login')" class="flex-1 py-2 rounded-full bg-[#C5A059] text-black text-sm font-bold">Login</button><button id="signupTab" onclick="switchAuth('signup')" class="flex-1 py-2 rounded-full text-sm font-bold text-white">Signup</button></div>
+<div id="authMessage" class="hidden text-center text-[12px] font-bold py-2.5 px-4 rounded-full mb-3 border"></div>
+<form id="authForm" onsubmit="return handleAuth(event)" class="space-y-3">
+<div id="roleFieldWrap" class="hidden"><select id="roleField" class="w-full border rounded-full px-4 py-3 text-sm"><option value="buyer">Buyer</option><option value="seller">Seller</option></select></div>
+<input id="nameField" placeholder="Full Name *" class="w-full border rounded-full px-4 py-3 text-sm hidden">
+<input id="shopField" placeholder="Shop Name *" class="w-full border rounded-full px-4 py-3 text-sm hidden">
+<div class="flex gap-2 hidden" id="cityPhoneWrap"><input id="cityField" placeholder="City *" class="w-1/2 border rounded-full px-4 py-3 text-sm"><input id="phoneField" placeholder="WhatsApp 03XX *" class="w-1/2 border rounded-full px-4 py-3 text-sm"></div>
+<input id="addressField" placeholder="Full Delivery Address *" class="w-full border-2 border-[#C5A059]/30 rounded-2xl px-4 py-3 text-sm hidden bg-yellow-50">
+<div id="paymentField" class="hidden bg-gray-50 border rounded-2xl p-3 space-y-2"><label class="flex gap-2 text-sm"><input type="checkbox" class="payCheck" value="JazzCash" checked> JazzCash</label><input id="jazzInput" placeholder="JazzCash Number" class="w-full border rounded-full px-3 py-2 text-sm"><label class="flex gap-2 text-sm"><input type="checkbox" class="payCheck" value="Easypaisa"> Easypaisa</label><input id="easyInput" placeholder="Easypaisa Number" class="hidden w-full border rounded-full px-3 py-2 text-sm"><label class="flex gap-2 text-sm"><input type="checkbox" class="payCheck" value="COD" checked> COD</label></div>
+<input id="emailField" placeholder="Email *" required type="email" class="w-full border rounded-full px-4 py-3 text-sm">
+<input id="passField" placeholder="Password *" required type="password" class="w-full border rounded-full px-4 py-3 text-sm">
+<button type="submit" class="w-full bg-[#0B0F1A] text-[#C5A059] border border-[#C5A059] rounded-full py-3 text-sm font-bold">Continue</button>
+</form>
+<div class="mt-4 border-t pt-3"><button onclick="openForgot()" class="text-red-600 text-xs font-bold underline w-full text-center">Forgot Password? - Secure</button><div id="forgotBox" class="hidden mt-2 bg-red-50 border-2 border-red-200 p-4 rounded-2xl"><p class="text-[11px] font-bold text-red-600 mb-2">Secure Verification - Name + Phone + Email Required</p><input id="forgotName" placeholder="Full Name - As Registered" class="w-full border rounded-full px-3 py-2 text-xs mb-2"><input id="forgotPhone" placeholder="WhatsApp Phone - As Registered" class="w-full border rounded-full px-3 py-2 text-xs mb-2"><input id="forgotEmail" placeholder="Registered Email" class="w-full border rounded-full px-3 py-2 text-xs mb-2"><input id="forgotNewPass" type="password" placeholder="New Password" class="w-full border rounded-full px-3 py-2 text-xs mb-2"><button onclick="doForgot()" class="w-full bg-red-600 text-white rounded-full py-2 text-xs font-bold">Verify & Update Password</button></div></div>
+</div></div>
+
+<div id="buyerDashboard" class="fixed inset-0 z-[60] hidden bg-[#f8f6f0] overflow-auto"><div class="max-w-6xl mx-auto px-4 py-6"><div class="flex justify-between items-center mb-4"><h2 id="buyerDashboardTitle" class="text-2xl font-bold">My Account</h2><button onclick="toggleMenu()" class="w-10 h-10 bg-black text-[#C5A059] border border-[#C5A059] rounded-full flex items-center justify-center"><i class="fa-solid fa-bars"></i></button></div>
+<div class="bg-white border-2 border-[#C5A059]/20 rounded-2xl p-5 mb-6"><h4 class="font-bold text-sm mb-3">Basic Information</h4><div id="buyerAccountInfo" class="text-[13px] space-y-1.5"></div><button onclick="openEditProfile()" class="mt-4 w-full bg-black text-white py-2.5 rounded-full text-xs font-bold">Edit Information</button></div>
+<div id="editProfileBox" class="hidden bg-white border-2 border-[#C5A059] rounded-2xl p-5 mb-6"><h4 class="font-bold mb-3">Edit Profile - Basic Info</h4><div class="grid md:grid-cols-2 gap-3"><input id="editName" placeholder="Full Name" class="w-full border rounded-full px-4 py-2.5 text-sm"><input id="editShop" placeholder="Shop Name" class="w-full border rounded-full px-4 py-2.5 text-sm"><input id="editCity" placeholder="City" class="w-full border rounded-full px-4 py-2.5 text-sm"><input id="editPhone" placeholder="WhatsApp" class="w-full border rounded-full px-4 py-2.5 text-sm"><input id="editAddress" placeholder="Full Address" class="w-full border rounded-full px-4 py-2.5 text-sm md:col-span-2"></div><button onclick="saveEditProfile()" class="mt-4 w-full bg-black text-white py-3 rounded-full text-sm font-bold">Save Profile</button></div>
+<h4 class="font-bold mb-3 bg-[#0B0F1A] text-[#C5A059] border border-[#C5A059] px-4 py-2 rounded-full w-fit text-xs">Order History</h4><div id="buyerOrderHistory" class="bg-white border-2 border-[#C5A059]/20 rounded-2xl p-4 min-h-[200px]"></div>
+</div></div>
+
+<div id="dashModal" class="fixed inset-0 z-50 hidden bg-[#f8f6f0] overflow-auto"><div class="max-w-6xl mx-auto px-4 py-6"><div class="flex justify-between items-center mb-4"><h2 class="text-xl font-bold">Seller Panel</h2><button onclick="toggleMenu()" class="w-10 h-10 bg-black text-[#C5A059] border border-[#C5A059] rounded-full flex items-center justify-center"><i class="fa-solid fa-bars"></i></button></div><div class="grid md:grid-cols-4 gap-3 mb-4"><div class="bg-white border rounded-2xl p-4"><p class="text-xs">Shop</p><h3 id="statShop" class="font-bold">-</h3></div><div class="bg-white border rounded-2xl p-4"><p class="text-xs">WhatsApp</p><h3 id="statPhone" class="font-bold">-</h3></div><div class="bg-white border rounded-2xl p-4"><p class="text-xs">Address</p><h3 id="statAddress" class="font-bold text-[11px]">-</h3></div><div class="bg-[#0B0F1A] text-[#C5A059] border border-[#C5A059] rounded-2xl p-4"><h3 id="statProd" class="text-xl font-bold">0</h3><p id="statCommissionNote" class="text-[11px]">15%</p></div></div><div class="grid md:grid-cols-5 gap-4"><div class="md:col-span-2 bg-white rounded-2xl p-5 border"><h4 class="font-bold mb-3">Add Product</h4><form onsubmit="return addProduct(event)" class="space-y-2"><input id="pName" required placeholder="Product Name" class="w-full border rounded-full px-3 py-2.5 text-sm"><div class="flex gap-2"><input id="pPrice" required type="number" placeholder="Price" class="w-1/2 border rounded-full px-3 py-2.5 text-sm"><select id="pCat" class="w-1/2 border rounded-full px-3 py-2.5 text-sm"><option value="men">Men Perfume</option><option value="women">Women</option><option value="attar">Attar</option><option value="watch">Watches</option><option value="men-watch">Men Watches</option></select></div><input id="pDesc" placeholder="Description" class="w-full border rounded-full px-3 py-2.5 text-sm"><input id="pImg" placeholder="Image URL" class="w-full border rounded-full px-3 py-2.5 text-sm"><button type="submit" class="w-full bg-black text-white rounded-full py-3 text-sm font-bold">Submit</button></form></div><div class="md:col-span-3"><div id="myProducts" class="grid grid-cols-2 gap-3"></div></div></div></div></div><div id="adminModal" class="fixed inset-0 z-[70] hidden bg-[#f8f6f0] overflow-auto"><div class="max-w-7xl mx-auto px-4 py-6">
+<div class="flex justify-between items-center mb-4"><h2 class="text-2xl font-bold">Admin Panel</h2><button onclick="toggleMenu()" class="w-10 h-10 bg-black text-[#C5A059] border border-[#C5A059] rounded-full flex items-center justify-center"><i class="fa-solid fa-bars"></i></button></div>
+<div class="grid md:grid-cols-3 gap-3 mb-4">
+<div class="bg-white border-2 border-red-200 rounded-2xl p-4"><h4 class="font-bold text-red-600 text-sm mb-2">Transfer Ownership</h4><input id="newOwnerEmail" placeholder="New Email" class="w-full border rounded-full px-3 py-2 text-sm mb-2"><input id="newOwnerPass" placeholder="New Pass" type="password" class="w-full border rounded-full px-3 py-2 text-sm mb-2"><button onclick="transferOwnership()" class="w-full bg-red-600 text-white rounded-full py-2 text-sm">Transfer</button><p class="text-[10px] mt-1">Current: <span id="currentAdminEmail"></span></p></div>
+<div class="bg-white border-2 border-[#C5A059] rounded-2xl p-4 md:col-span-2"><h4 class="font-bold text-sm mb-2">Logo + URL + Theme + Footer</h4><div class="grid md:grid-cols-2 gap-2"><input id="setSiteName" placeholder="Site Name" class="w-full border rounded-full px-3 py-2 text-sm"><input id="setWebsiteUrl" placeholder="Website URL" class="w-full border rounded-full px-3 py-2 text-sm"><input id="setLogoText" placeholder="Logo Letter" class="w-full border rounded-full px-3 py-2 text-sm"><input id="setLogoImg" placeholder="Logo Image URL" class="w-full border rounded-full px-3 py-2 text-sm bg-yellow-50"><input id="setHeroTitle" placeholder="Hero Title" class="w-full border rounded-full px-3 py-2 text-sm md:col-span-2"><input id="setHeroDesc" placeholder="Hero Desc" class="w-full border rounded-full px-3 py-2 text-sm md:col-span-2"><input id="setHeroImg" placeholder="Hero BG Image" class="w-full border rounded-full px-3 py-2 text-sm md:col-span-2"><select id="setTheme" class="w-full border rounded-full px-3 py-2 text-sm"><option value="#0B0F1A">Black+Gold Luxury</option><option value="#1e40af">Blue Royal</option><option value="#065f46">Green Emerald</option><option value="#6d28d9">Purple</option></select><input id="setFooter" placeholder="Footer Line" class="w-full border rounded-full px-3 py-2 text-sm"></div></div>
+</div>
+<div class="grid md:grid-cols-2 gap-3 mb-4"><div class="bg-white border rounded-2xl p-4"><h4 class="font-bold text-sm mb-2">Commission & Accounts</h4><div class="grid grid-cols-2 gap-2"><input id="setCommission" type="number" placeholder="Commission %" class="w-full border rounded-full px-3 py-2 text-sm"><input id="setAdminWhatsApp" placeholder="Admin WA" class="w-full border rounded-full px-3 py-2 text-sm"><input id="setAccName" placeholder="Account Title" class="w-full border rounded-full px-3 py-2 text-sm"><input id="setAccNumber" placeholder="Account Number" class="w-full border rounded-full px-3 py-2 text-sm"></div></div><div class="bg-white border rounded-2xl p-4"><input id="setNewPass" type="password" placeholder="New Admin Pass" class="w-full border rounded-full px-3 py-2 text-sm mb-2"><button onclick="changeAdminPass()" class="w-full bg-gray-900 text-white rounded-full py-2 text-xs mb-2">Update Pass</button><button onclick="saveAllSettings()" class="w-full bg-black text-white rounded-full py-3 text-sm font-bold">💾 SAVE ALL</button></div></div>
+<div class="grid md:grid-cols-3 gap-3 mb-4"><div class="bg-white border rounded-2xl p-4"><p class="text-xs">Pending</p><h3 id="adminPending" class="text-xl font-bold text-orange-600">0</h3></div><div class="bg-white border rounded-2xl p-4"><p class="text-xs">Total Users</p><h3 id="adminTotalUsers" class="text-xl font-bold">0</h3></div><div class="bg-[#0B0F1A] border border-[#C5A059] rounded-2xl p-4"><p class="text-xs text-[#C5A059]">Commission <span id="adminCommissionPercent">15%</span> -> <span id="adminCommissionAcc"></span></p><h3 id="adminCommission" class="text-xl font-bold text-[#C5A059]">Rs 0</h3></div></div>
+<h4 class="font-bold mb-2 bg-black text-white px-4 py-2 rounded-full w-fit text-xs">Pending Products</h4><div id="adminPendingList" class="space-y-2 mb-6"></div>
+<h4 class="font-bold mb-2 bg-red-600 text-white px-4 py-2 rounded-full w-fit text-xs">All Users</h4><div class="bg-white border rounded-2xl p-3 mb-6"><div id="adminUsersList" class="space-y-2 max-h-[500px] overflow-auto"></div></div>
+<h4 class="font-bold mb-2 bg-black text-white px-4 py-2 rounded-full w-fit text-xs">All Products</h4><div id="adminAllProducts" class="grid grid-cols-2 md:grid-cols-4 gap-3 pb-20"></div>
+</div></div><div id="cartModal" class="fixed inset-0 z-[65] hidden bg-black/50"><div class="absolute right-0 top-0 h-full w-full max-w-md bg-white p-5 overflow-auto"><div class="flex justify-between items-center mb-4"><h3 class="font-bold">My Cart</h3><button onclick="toggleMenu()" class="w-10 h-10 bg-black text-[#C5A059] border border-[#C5A059] rounded-full flex items-center justify-center"><i class="fa-solid fa-bars"></i></button></div><div id="cartItems"></div><div class="mt-4 border-t pt-4">
+<div class="bg-yellow-50 border-2 border-[#C5A059]/30 rounded-2xl p-4 mb-4"><h4 class="font-bold text-sm mb-2">Delivery Address</h4><p id="currentAddressDisplay" class="text-xs bg-white border rounded-xl p-3 mb-3">No address saved</p><textarea id="deliveryAddress" placeholder="Full Delivery Address *" class="w-full border-2 border-[#C5A059]/30 rounded-2xl px-4 py-3 text-sm bg-white" rows="3"></textarea><div class="flex gap-2 mt-3"><button onclick="confirmAddress()" class="flex-1 bg-[#0B0F1A] text-[#C5A059] border border-[#C5A059] py-2.5 rounded-full text-xs font-bold">Confirm Address</button><button onclick="changeAddress()" class="flex-1 bg-[#C5A059] text-black py-2.5 rounded-full text-xs font-bold">Change & Save</button></div><p id="addressStatus" class="text-[10px] text-green-600 mt-2 hidden">✅ Address Confirmed</p></div>
+<div id="payOptions" class="space-y-2 mb-3"></div><div id="sellerPayDetails" class="bg-yellow-50 border rounded-2xl p-3 text-xs mb-3 hidden"></div><div class="bg-gray-50 rounded-2xl p-3 mb-3"><div class="flex justify-between text-sm"><span>Subtotal</span><span id="subTotal">Rs 0</span></div><div class="flex justify-between font-bold"><span>Total + Commission</span><span id="cartTotal">Rs 0</span></div></div><div id="commissionPayBox" class="bg-[#0B0F1A] text-[#C5A059] border border-[#C5A059] rounded-2xl p-3 text-xs mb-3"></div><button onclick="checkout()" class="w-full bg-green-600 text-white py-3.5 rounded-full text-sm font-bold">Confirm Order on WhatsApp</button><p id="orderNote" class="text-[10px] text-center mt-2">Order + Address WhatsApp pe jayega</p></div></div></div>
+
+<div id="wishModal" class="fixed inset-0 z-[65] hidden bg-black/50"><div class="absolute right-0 top-0 h-full w-full max-w-md bg-white p-5 overflow-auto"><div class="flex justify-between items-center mb-4"><h3 class="font-bold">Wishlist</h3><button onclick="toggleMenu()" class="w-10 h-10 bg-black text-[#C5A059] border border-[#C5A059] rounded-full flex items-center justify-center"><i class="fa-solid fa-bars"></i></button></div><div id="wishItems"></div></div></div><script>
+let ADMIN_EMAIL = localStorage.getItem('sh_admin_email') || "alihamzaalihamza0030@gmail.com";
+let currentUser = JSON.parse(localStorage.getItem('sh_current')||"null");
+let users = JSON.parse(localStorage.getItem('sh_users')||"[]");
+let siteSettings = JSON.parse(localStorage.getItem('sh_site_settings')) || {name:"AtrVault.pk", websiteUrl:"https://AtrVault.pk", logoText:"A", logoImg:"", heroTitle:"Pakistan's Most<br>Trusted <span class='text-[#C5A059]'>Luxury Perfume & Watches</span>", heroDesc:"All Original Brands. 100% Authentic. Buyer Protection.", heroImg:"https://images.unsplash.com/photo-1594035910387-fea47794261f?w=1200", theme:"#0B0F1A", footer:"© 2026 AtrVault.pk - Where Originality Meets Elegance ✨ - Rated 4.9/5", commission:15, accName:"Ali Hamza - JazzCash", accNumber:"03340686649", adminWhatsApp:"03340686649"};
+let products = JSON.parse(localStorage.getItem('sh_products')) || [
+{name:"J. Janan Gold Men",price:2200,cat:"men",seller:"J. Fragrances",city:"Karachi",desc:"Original J.",phone:"9230046761516",sellerPhone:"03004676151",adminWhatsApp:"03340686649",payments:["JazzCash","COD"],payDetails:{JazzCash:"03004567890"},img:"https://images.unsplash.com/photo-1594035910387-fea47794261f?w=400",status:"approved"},
+{name:"Bonanza Bloom Women",price:1850,cat:"women",seller:"Bonanza Official",city:"Lahore",desc:"Floral Original",phone:"923112345678",sellerPhone:"03112345678",adminWhatsApp:"03340686649",payments:["Easypaisa","COD"],payDetails:{Easypaisa:"03112345678"},img:"https://images.unsplash.com/photo-1541643600914-78b084683601?w=400",status:"approved"},
+{name:"Saeed Ghani Amber Oud 12ml",price:1200,cat:"attar",seller:"Saeed Ghani",city:"Multan",desc:"Pure Attar",phone:"923009876543",sellerPhone:"03009876543",adminWhatsApp:"03340686649",payments:["JazzCash"],payDetails:{JazzCash:"03009876543"},img:"https://images.unsplash.com/photo-1588405748880-12d1d2a59f75?w=400",status:"approved"},
+{name:"Service Executive Steel",price:7500,cat:"men-watch",seller:"Service Lahore",city:"Lahore",desc:"Steel Chain",phone:"923334445555",sellerPhone:"03334445555",adminWhatsApp:"03340686649",payments:["JazzCash","COD"],payDetails:{JazzCash:"03334445555"},img:"https://images.unsplash.com/photo-1524805444973-bfccaadfaec2?w=400",status:"approved"},
+{name:"Sonata Gold Women",price:6200,cat:"watch",seller:"Sonata PK",city:"Karachi",desc:"Golden Dial",phone:"923335556666",sellerPhone:"03335556666",adminWhatsApp:"03340686649",payments:["COD"],payDetails:{COD:"COD"},img:"https://images.unsplash.com/photo-1532668618906-0f16d7ea19a6?w=400",status:"approved"},
+{name:"Naviforce 9170 Black",price:5500,cat:"men-watch",seller:"Naviforce PK",city:"Faisalabad",desc:"Leather Strap",phone:"923006667777",sellerPhone:"03006667777",adminWhatsApp:"03340686649",payments:["JazzCash"],payDetails:{JazzCash:"03006667777"},img:"https://images.unsplash.com/photo-1555421689-d68471e189f2?w=400",status:"approved"},
+{name:"Curren 8355 Chronograph",price:4800,cat:"men-watch",seller:"Curren Official",city:"Sialkot",desc:"Chronograph Working",phone:"923118889999",sellerPhone:"03118889999",adminWhatsApp:"03340686649",payments:["Easypaisa","COD"],payDetails:{Easypaisa:"03118889999"},img:"https://images.unsplash.com/photo-1523170335258-f5ed11844a49?w=400",status:"approved"},
+{name:"TimeCo Couple Pair",price:8900,cat:"watch",seller:"TimeCo",city:"Lahore",desc:"His & Hers",phone:"923440001122",sellerPhone:"03440001122",adminWhatsApp:"03340686649",payments:["JazzCash","COD"],payDetails:{JazzCash:"03440001122"},img:"https://images.unsplash.com/photo-1548169874-53e85f753f1e?w=400",status:"approved"},
+{name:"Dior Sauvage Men",price:2500,cat:"men",seller:"AtrVault Branded",city:"Lahore",desc:"Dior Inspired 24h",phone:"923046761516",sellerPhone:"03046761516",adminWhatsApp:"03340686649",payments:["JazzCash","Easypaisa","COD"],payDetails:{JazzCash:"03340686649"},img:"https://images.unsplash.com/photo-1547887537-6158d64c35b3?w=400",status:"approved"},
+{name:"Gucci Bloom Women",price:2300,cat:"women",seller:"AtrVault Branded",city:"Karachi",desc:"Floral Premium",phone:"923046761516",sellerPhone:"03046761516",adminWhatsApp:"03340686649",payments:["JazzCash","COD"],payDetails:{JazzCash:"03340686649"},img:"https://images.unsplash.com/photo-1593487568720-799d0d7ac3d7?w=400",status:"approved"},
+{name:"Oud Al Haramain Pure",price:1500,cat:"attar",seller:"Haramain Store",city:"Multan",desc:"Pure Oud 12ml",phone:"923008889999",sellerPhone:"03008889999",adminWhatsApp:"03340686649",payments:["JazzCash"],payDetails:{JazzCash:"03008889999"},img:"https://images.unsplash.com/photo-1519669556878-63bdad8a1a49?w=400",status:"approved"},
+{name:"Rolex Submariner Men",price:12500,cat:"men-watch",seller:"Rolex PK",city:"Lahore",desc:"Automatic Premium",phone:"923337778888",sellerPhone:"03337778888",adminWhatsApp:"03340686649",payments:["JazzCash","COD"],payDetails:{JazzCash:"03337778888"},img:"https://images.unsplash.com/photo-1614164185128-e4ec99c436d7?w=400",status:"approved"},
+{name:"Fossil Rose Gold Women",price:9800,cat:"watch",seller:"Fossil Official",city:"Islamabad",desc:"Rose Gold Original",phone:"923001112233",sellerPhone:"03001112233",adminWhatsApp:"03340686649",payments:["Easypaisa","COD"],payDetails:{Easypaisa:"03001112233"},img:"https://images.unsplash.com/photo-1434056886845-dac89ffe9b56?w=400",status:"approved"},
+{name:"Axe Signature Gold Men",price:1800,cat:"men",seller:"Axe Store",city:"Lahore",desc:"Daily Use 12h",phone:"923004445566",sellerPhone:"03004445566",adminWhatsApp:"03340686649",payments:["COD"],payDetails:{COD:"COD"},img:"https://images.unsplash.com/photo-1582211594533-268f4f1edcb9?w=400",status:"approved"},
+{name:"J. Exclusive Attar 20ml",price:2000,cat:"attar",seller:"J. Attars",city:"Karachi",desc:"20ml Long Lasting",phone:"923002223344",sellerPhone:"03002223344",adminWhatsApp:"03340686649",payments:["JazzCash","Easypaisa"],payDetails:{JazzCash:"03002223344"},img:"https://images.unsplash.com/photo-1593487568720-799d0d7ac3d7?w=400",status:"approved"},
+{name:"Chanel No.5 Women",price:2700,cat:"women",seller:"AtrVault Branded",city:"Lahore",desc:"Chanel Inspired Classic",phone:"923046761516",sellerPhone:"03046761516",adminWhatsApp:"03340686649",payments:["JazzCash","COD"],payDetails:{JazzCash:"03340686649"},img:"https://images.unsplash.com/photo-1541643600914-78b084683601?w=400",status:"approved"},
+{name:"Bleu de Chanel Men",price:2600,cat:"men",seller:"AtrVault Branded",city:"Karachi",desc:"Bleu Premium",phone:"923046761516",sellerPhone:"03046761516",adminWhatsApp:"03340686649",payments:["JazzCash","Easypaisa","COD"],payDetails:{JazzCash:"03340686649"},img:"https://images.unsplash.com/photo-1594035910387-fea47794261f?w=400",status:"approved"},
+{name:"Al Haramain Oud 15ml",price:1800,cat:"attar",seller:"Haramain Official",city:"Lahore",desc:"15ml Pure",phone:"923004445566",sellerPhone:"03004445566",adminWhatsApp:"03340686649",payments:["JazzCash","COD"],payDetails:{JazzCash:"03004445566"},img:"https://images.unsplash.com/photo-1588405748880-12d1d2a59f75?w=400",status:"approved"},
+{name:"Casio Edifice Steel Men",price:11000,cat:"men-watch",seller:"Casio Pakistan",city:"Faisalabad",desc:"Steel Branded",phone:"923001234567",sellerPhone:"03001234567",adminWhatsApp:"03340686649",payments:["JazzCash","COD"],payDetails:{JazzCash:"03001234567"},img:"https://images.unsplash.com/photo-1524805444973-bfccaadfaec2?w=400",status:"approved"},
+{name:"Michael Kors Gold Women",price:10500,cat:"watch",seller:"MK Watches PK",city:"Islamabad",desc:"MK Gold Branded",phone:"923001112233",sellerPhone:"03001112233",adminWhatsApp:"03340686649",payments:["Easypaisa","COD"],payDetails:{Easypaisa:"03001112233"},img:"https://images.unsplash.com/photo-1548169874-53e85f753f1e?w=400",status:"approved"}
+];
+let cart=[], wishlist=[], activeCat='all', authMode='login', confirmedAddress='';
+let orders=JSON.parse(localStorage.getItem('sh_orders')||"[]");
+function save(){localStorage.setItem('sh_products',JSON.stringify(products)); localStorage.setItem('sh_users',JSON.stringify(users)); localStorage.setItem('sh_current',JSON.stringify(currentUser)); localStorage.setItem('sh_admin_email',ADMIN_EMAIL); localStorage.setItem('sh_site_settings',JSON.stringify(siteSettings)); localStorage.setItem('sh_orders',JSON.stringify(orders));}
+function applySiteSettings(){
+document.getElementById('siteNameHead').innerText=siteSettings.name;
+document.getElementById('siteTitleTag').innerText=siteSettings.name+' - Luxury';
+document.getElementById('authSiteName').innerText=siteSettings.name;
+document.getElementById('topWebsite').innerText=siteSettings.websiteUrl;
+document.getElementById('siteUrlHead').innerText=siteSettings.websiteUrl;
+document.getElementById('authSiteUrl').innerText=siteSettings.websiteUrl;
+document.getElementById('topAcc').innerText=siteSettings.accNumber;
+document.getElementById('footerText').innerText=siteSettings.footer;
+document.getElementById('footerUrl').innerText=siteSettings.websiteUrl;
+document.getElementById('footerWA').innerText=siteSettings.adminWhatsApp;
+document.getElementById('heroTitle').innerHTML=siteSettings.heroTitle;
+document.getElementById('heroDesc').innerText=siteSettings.heroDesc;
+document.getElementById('heroImgOverlay').style.backgroundImage=`url('${siteSettings.heroImg}')`;
+document.getElementById('setSiteName').value=siteSettings.name;
+document.getElementById('setWebsiteUrl').value=siteSettings.websiteUrl;
+document.getElementById('setLogoText').value=siteSettings.logoText;
+document.getElementById('setLogoImg').value=siteSettings.logoImg;
+document.getElementById('setHeroTitle').value=siteSettings.heroTitle.replace(/<[^>]*>/g,'');
+document.getElementById('setHeroDesc').value=siteSettings.heroDesc;
+document.getElementById('setHeroImg').value=siteSettings.heroImg;
+document.getElementById('setTheme').value=siteSettings.theme;
+document.getElementById('setFooter').value=siteSettings.footer;
+document.getElementById('setCommission').value=siteSettings.commission;
+document.getElementById('setAccName').value=siteSettings.accName;
+document.getElementById('setAccNumber').value=siteSettings.accNumber;
+document.getElementById('setAdminWhatsApp').value=siteSettings.adminWhatsApp;
+document.getElementById('adminCommissionPercent').innerText=siteSettings.commission+'%';
+document.getElementById('adminCommissionAcc').innerText=siteSettings.accNumber;
+document.getElementById('statCommissionNote').innerText=siteSettings.commission+'% -> '+siteSettings.accNumber;
+document.getElementById('orderNote').innerText='Order + Address WhatsApp pe jayega - '+siteSettings.adminWhatsApp;
+let logoImgEl=document.getElementById('logoImg'); let logoLetterEl=document.getElementById('logoLetter');
+if(siteSettings.logoImg && siteSettings.logoImg.startsWith('http')){logoImgEl.src=siteSettings.logoImg; logoImgEl.classList.remove('hidden'); logoLetterEl.classList.add('hidden');} else {logoImgEl.classList.add('hidden'); logoLetterEl.classList.remove('hidden'); logoLetterEl.innerText=siteSettings.logoText||siteSettings.name[0];}
+}
+function toggleMenu(){document.getElementById('sideMenu').classList.toggle('hidden'); renderMenu();}
+function closeMenu(){document.getElementById('sideMenu').classList.add('hidden');}
+function closeAllPanels(){document.getElementById('buyerDashboard').classList.add('hidden'); document.getElementById('dashModal').classList.add('hidden'); document.getElementById('adminModal').classList.add('hidden'); document.getElementById('cartModal').classList.add('hidden'); document.getElementById('wishModal').classList.add('hidden');}
+function goHome(){closeAllPanels(); closeMenu(); if(!currentUser){document.getElementById('publicLanding').classList.remove('hidden'); document.getElementById('privateContent').classList.add('hidden');} else {document.getElementById('publicLanding').classList.add('hidden'); document.getElementById('privateContent').classList.remove('hidden');} window.scrollTo(0,0);}
+function renderMenu(){
+let mc=document.getElementById('menuContent');
+let html='';
+if(!currentUser){
+html+=`<button onclick="openAuth(); closeMenu()" class="w-full bg-[#C5A059] text-black py-3 rounded-full text-sm font-bold">Login / Signup</button>`;
+} else {
+html+=`<div class="bg-[#0B0F1A] text-[#C5A059] border border-[#C5A059]/20 rounded-2xl p-3 mb-2"><p class="text-[12px] font-bold">${currentUser.name}</p><p class="text-[10px]">${currentUser.email}</p></div>`;
+html+=`<button onclick="closeAllPanels(); openBuyerDashboard(); closeMenu()" class="w-full bg-white border py-3 rounded-full text-sm font-bold text-left px-5"><i class="fa-solid fa-user mr-2"></i> My Account</button>`;
+html+=`<button onclick="closeAllPanels(); openCart(); closeMenu()" class="w-full bg-white border py-3 rounded-full text-sm font-bold text-left px-5"><i class="fa-solid fa-bag-shopping mr-2"></i> My Cart</button>`;
+if(currentUser.role==='seller'){html+=`<button onclick="closeAllPanels(); openDashboard(); closeMenu()" class="w-full bg-white border py-3 rounded-full text-sm font-bold text-left px-5"><i class="fa-solid fa-store mr-2"></i> Seller Panel</button>`;}
+if(currentUser.email.toLowerCase()===ADMIN_EMAIL.toLowerCase()){
+html+=`<button onclick="closeAllPanels(); openAdmin(); closeMenu()" class="w-full bg-[#0B0F1A] text-[#C5A059] border border-[#C5A059] py-3 rounded-full text-sm font-bold text-left px-5"><i class="fa-solid fa-gear mr-2"></i> Admin Control</button>`;
+}
+html+=`<button onclick="closeAllPanels(); openWishlist(); closeMenu()" class="w-full bg-white border py-3 rounded-full text-sm font-bold text-left px-5"><i class="fa-solid fa-heart mr-2"></i> Wishlist</button>`;
+html+=`<button onclick="logout()" class="w-full bg-red-50 text-red-600 border border-red-200 py-3 rounded-full text-sm font-bold mt-3"><i class="fa-solid fa-right-from-bracket mr-2"></i> Logout</button>`;
+}
+mc.innerHTML=html;
+}
+function updateVisibility(){
+if(currentUser){
+document.getElementById('publicLanding').classList.add('hidden');
+document.getElementById('privateContent').classList.remove('hidden');
+document.getElementById('authBtn').classList.add('hidden');
+document.getElementById('cartBtn').classList.remove('hidden');
+document.getElementById('adminBtn').classList.toggle('hidden',currentUser.email.toLowerCase()!==ADMIN_EMAIL.toLowerCase());
+let rb=document.getElementById('roleBadge');
+if(currentUser.email.toLowerCase()===ADMIN_EMAIL.toLowerCase()){rb.innerText='Admin Panel';}
+else if(currentUser.role==='seller'){rb.innerText='Seller Panel';}
+else {rb.innerText='Buyer Panel';}
+rb.className='text-xs bg-[#0B0F1A] text-[#C5A059] border border-[#C5A059] px-4 py-1.5 rounded-full font-bold';
+renderProducts(); renderMenu();
+}else{
+document.getElementById('publicLanding').classList.remove('hidden');
+document.getElementById('privateContent').classList.add('hidden');
+document.getElementById('authBtn').classList.remove('hidden');
+document.getElementById('adminBtn').classList.add('hidden');
+document.getElementById('cartBtn').classList.add('hidden');
+document.getElementById('roleBadge').innerText='';
+}
+}
+function renderProducts(){let list=products.filter(p=>p.status==='approved'); if(activeCat!=='all') list=list.filter(p=>p.cat===activeCat); let q=document.getElementById('searchInput')?.value.toLowerCase()||""; if(q) list=list.filter(p=>p.name.toLowerCase().includes(q)); document.getElementById('products').innerHTML=list.map(p=>{let idx=products.indexOf(p); return `<div class="bg-white rounded-[1.5rem] border border-[#C5A059]/20 overflow-hidden group hover:shadow-xl transition"><div class="h-48 bg-gray-100 relative overflow-hidden"><img src="${p.img}" class="w-full h-full object-cover group-hover:scale-110 transition duration-500"><button onclick="toggleWishlist(${idx})" class="absolute top-3 right-3 w-8 h-8 bg-white rounded-full shadow"><i class="fa-${wishlist.includes(idx)?'solid text-red-500':'regular'} fa-heart"></i></button><span class="absolute top-3 left-3 bg-[#0B0F1A] text-[#C5A059] border border-[#C5A059] text-[9px] px-2 py-1 rounded-full uppercase">${p.cat}</span></div><div class="p-4"><h4 class="font-bold text-sm text-[#0B0F1A]">${p.name}</h4><p class="text-[11px] text-gray-500">${p.seller}</p><p class="text-[10px] text-[#C5A059]">S:${p.sellerPhone} A:${p.adminWhatsApp}</p><div class="flex justify-between items-center mt-3"><span class="font-bold">Rs ${p.price}</span><button onclick="addToCart(${idx})" class="bg-[#0B0F1A] text-[#C5A059] border border-[#C5A059] px-4 py-2 rounded-full text-xs font-bold">Add to Cart</button></div></div></div>`}).join(''); document.getElementById('pendingCount').innerText=products.filter(p=>p.status==='pending').length;}
+function searchProducts(){renderProducts();} function filterCat(c){activeCat=c; document.querySelectorAll('.filter-btn').forEach(b=>{b.className=b.dataset.cat===c?'filter-btn whitespace-nowrap bg-[#0B0F1A] text-[#C5A059] border border-[#C5A059] px-5 py-2.5 rounded-full text-xs font-bold':'filter-btn whitespace-nowrap bg-white border px-5 py-2.5 rounded-full text-xs'}); renderProducts();}
+function openAuth(){authMode='login'; document.getElementById('authModal').classList.remove('hidden'); switchAuth('login');}
+function closeAuth(){document.getElementById('authModal').classList.add('hidden'); document.getElementById('forgotBox').classList.add('hidden'); let mb=document.getElementById('authMessage'); if(mb) mb.classList.add('hidden');}
+function switchAuth(m){authMode=m; document.getElementById('loginTab').className=m==='login'?'flex-1 py-2 rounded-full bg-[#C5A059] text-black text-sm font-bold':'flex-1 py-2 rounded-full text-sm font-bold text-white'; document.getElementById('signupTab').className=m==='signup'?'flex-1 py-2 rounded-full bg-[#C5A059] text-black text-sm font-bold':'flex-1 py-2 rounded-full text-sm font-bold text-white'; document.getElementById('roleFieldWrap').classList.toggle('hidden',m==='login'); document.getElementById('nameField').classList.toggle('hidden',m==='login'); document.getElementById('shopField').classList.toggle('hidden',m==='login'); document.getElementById('cityPhoneWrap').classList.toggle('hidden',m==='login'); document.getElementById('addressField').classList.toggle('hidden',m==='login'); document.getElementById('paymentField').classList.toggle('hidden',m==='login'); let mb=document.getElementById('authMessage'); if(mb) mb.classList.add('hidden');}
+function handleAuth(e){
+e.preventDefault();
+let msgBox=document.getElementById('authMessage');
+let email=document.getElementById('emailField').value.toLowerCase().trim();
+let pass=document.getElementById('passField').value;
+if(authMode==='signup'){
+let role=document.getElementById('roleField').value;
+let name=document.getElementById('nameField').value.trim();
+let shop=document.getElementById('shopField').value.trim()||name;
+let city=document.getElementById('cityField').value.trim()||'Lahore';
+let phone=document.getElementById('phoneField').value.replace(/[^0-9]/g,'');
+if(phone.startsWith('0')) phone='92'+phone.substring(1);
+let address=document.getElementById('addressField').value.trim();
+let pays=[...document.querySelectorAll('.payCheck:checked')].map(c=>c.value);
+let payDetails={};
+if(pays.includes('JazzCash')) payDetails.JazzCash=document.getElementById('jazzInput').value;
+if(pays.includes('Easypaisa')) payDetails.Easypaisa=document.getElementById('easyInput').value;
+if(pays.includes('COD')) payDetails.COD='COD';
+if(!name){msgBox.className='bg-red-100 text-red-600 border border-red-200 text-center text-[12px] font-bold py-2.5 px-4 rounded-full mb-3'; msgBox.innerText='❌ Name Required'; msgBox.classList.remove('hidden'); return false;}
+if(!address && role==='buyer'){msgBox.className='bg-red-100 text-red-600 border border-red-200 text-center text-[12px] font-bold py-2.5 px-4 rounded-full mb-3'; msgBox.innerText='❌ Address Required'; msgBox.classList.remove('hidden'); return false;}
+if(users.find(u=>u.email===email)){msgBox.className='bg-orange-100 text-orange-600 border border-orange-200 text-center text-[12px] font-bold py-2.5 px-4 rounded-full mb-3'; msgBox.innerText='⚠️ Email Exists! Login Karo'; msgBox.classList.remove('hidden'); switchAuth('login'); return false;}
+if(email.toLowerCase()===ADMIN_EMAIL.toLowerCase()) role='admin';
+let u={id:Date.now(),name,email,pass,shopName:shop,city,phone,address,payments:pays,payDetails,role,blocked:false};
+users.push(u); currentUser=u; confirmedAddress=address; save();
+msgBox.className='bg-green-100 text-green-700 border border-green-200 text-center text-[12px] font-bold py-2.5 px-4 rounded-full mb-3'; msgBox.innerText='✅ Signup Successful';
+msgBox.classList.remove('hidden');
+setTimeout(()=>{closeAuth(); updateVisibility();},800);
+}else{
+let u=users.find(u=>u.email===email&&u.pass===pass);
+if(!u){msgBox.className='bg-red-100 text-red-600 border border-red-200 text-center text-[12px] font-bold py-2.5 px-4 rounded-full mb-3'; msgBox.innerText='❌ Wrong Email or Password!'; msgBox.classList.remove('hidden'); return false;}
+if(u.blocked){msgBox.className='bg-red-100 text-red-600 border border-red-200 text-center text-[12px] font-bold py-2.5 px-4 rounded-full mb-3'; msgBox.innerText='🚫 Account BLOCKED'; msgBox.classList.remove('hidden'); return false;}
+currentUser=u; confirmedAddress=u.address||''; save();
+msgBox.className='bg-green-100 text-green-700 border border-green-200 text-center text-[12px] font-bold py-2.5 px-4 rounded-full mb-3'; msgBox.innerText='✅ Login Successful';
+msgBox.classList.remove('hidden');
+setTimeout(()=>{closeAuth(); updateVisibility();},600);
+}
+return false;
+}
+function openForgot(){document.getElementById('forgotBox').classList.toggle('hidden');}
+function doForgot(){
+let name=document.getElementById('forgotName').value.trim();
+let phone=document.getElementById('forgotPhone').value.replace(/[^0-9]/g,'').trim();
+let email=document.getElementById('forgotEmail').value.toLowerCase().trim();
+let np=document.getElementById('forgotNewPass').value.trim();
+if(!name ||!phone ||!email ||!np){alert('All fields required - Name + Phone + Email + New Password'); return;}
+let u=users.find(x=>x.email.toLowerCase()===email && x.name.toLowerCase()===name.toLowerCase() && x.phone.replace(/[^0-9]/g,'').includes(phone.slice(-7)));
+if(!u){alert('❌ Verification Failed! Name, Phone, Email match nahi kar rahe - Sahi info do'); return;}
+u.pass=np; save(); alert('✅ Password Updated Successfully - Secure verification passed for '+name); document.getElementById('forgotBox').classList.add('hidden'); switchAuth('login');
+}
+function openBuyerDashboard(){if(!currentUser){alert('Login karo'); openAuth(); return;} closeAllPanels(); document.getElementById('buyerDashboard').classList.remove('hidden'); renderBuyerDashboard();}
+function closeBuyerDashboard(){document.getElementById('buyerDashboard').classList.add('hidden');}
+function renderBuyerDashboard(){
+let infoDiv=document.getElementById('buyerAccountInfo');
+infoDiv.innerHTML=`<p><b>Name:</b> ${currentUser.name}</p><p><b>Email:</b> ${currentUser.email}</p><p><b>Phone:</b> ${currentUser.phone}</p><p><b>City:</b> ${currentUser.city}</p><p><b>Shop:</b> ${currentUser.shopName||'-'}</p><p><b>Address:</b> ${currentUser.address||'Not Set'}</p><p><b>Role:</b> ${currentUser.role.toUpperCase()}</p>`;
+let histDiv=document.getElementById('buyerOrderHistory');
+let myOrders=orders.filter(o=>o.buyerEmail===currentUser.email).reverse();
+if(myOrders.length===0){histDiv.innerHTML='<p class="text-[12px] text-gray-400 p-4 text-center">No orders yet</p>';}
+else {histDiv.innerHTML=myOrders.map(o=>`<div class="border rounded-xl p-3 mb-2 bg-gray-50"><p class="font-bold text-[12px]">${o.date} - Total Rs ${o.total}</p><p class="text-[11px]">Address: ${o.address}</p><p class="text-[10px]">${o.items.map(it=>it.name).join(', ')}</p></div>`).join('');}
+document.getElementById('editName').value=currentUser.name;
+document.getElementById('editShop').value=currentUser.shopName||'';
+document.getElementById('editCity').value=currentUser.city||'';
+document.getElementById('editPhone').value=currentUser.phone||'';
+document.getElementById('editAddress').value=currentUser.address||'';
+let titleEl=document.getElementById('buyerDashboardTitle');
+if(currentUser.email.toLowerCase()===ADMIN_EMAIL.toLowerCase()) titleEl.innerText='Admin Panel - My Account';
+else if(currentUser.role==='seller') titleEl.innerText='Seller Panel - My Account';
+else titleEl.innerText='Buyer Panel - My Account';
+}
+function openEditProfile(){document.getElementById('editProfileBox').classList.remove('hidden');}
+function saveEditProfile(){
+let name=document.getElementById('editName').value.trim();
+let shop=document.getElementById('editShop').value.trim();
+let city=document.getElementById('editCity').value.trim();
+let phone=document.getElementById('editPhone').value.trim();
+let address=document.getElementById('editAddress').value.trim();
+if(!name){alert('Name required'); return;}
+currentUser.name=name; currentUser.shopName=shop||name; currentUser.city=city||currentUser.city; currentUser.phone=phone||currentUser.phone; currentUser.address=address||currentUser.address;
+let idx=users.findIndex(u=>u.email===currentUser.email);
+if(idx>=0){users[idx].name=name; users[idx].shopName=shop||name; users[idx].city=city||users[idx].city; users[idx].phone=phone||users[idx].phone; users[idx].address=address||users[idx].address;}
+confirmedAddress=address;
+save(); renderBuyerDashboard(); renderMenu(); updateVisibility();
+alert('✅ Profile Updated');
+document.getElementById('editProfileBox').classList.add('hidden');
+}
+function openDashboard(){if(!currentUser){alert('Login karo'); return;} closeAllPanels(); document.getElementById('dashModal').classList.remove('hidden'); renderDash();}
+function closeDashboard(){document.getElementById('dashModal').classList.add('hidden');}
+function renderDash(){
+document.getElementById('statShop').innerText=currentUser.shopName;
+document.getElementById('statPhone').innerText=currentUser.phone;
+document.getElementById('statAddress').innerText=currentUser.address||'No Address';
+let my=products.filter(p=>p.phone===currentUser.phone||p.seller===currentUser.shopName);
+document.getElementById('statProd').innerText=my.length+' Products';
+document.getElementById('myProducts').innerHTML=my.map(p=>{let idx=products.indexOf(p); return `<div class="bg-white border rounded-2xl p-3"><img src="${p.img}" class="h-24 w-full object-cover rounded-xl"><p class="font-bold text-sm mt-2">${p.name} - <span class="${p.status==='approved'?'text-green-600':'text-orange-500'}">${p.status}</span></p><p class="text-xs">Rs ${p.price}</p><button onclick="deleteProd(${idx})" class="text-red-500 text-xs mt-2">Delete</button></div>`}).join('')||'<p class="text-xs">No products</p>';
+}
+function addProduct(e){e.preventDefault(); let isAdmin=currentUser.email.toLowerCase()===ADMIN_EMAIL.toLowerCase(); let p={name:document.getElementById('pName').value, price:parseInt(document.getElementById('pPrice').value), cat:document.getElementById('pCat').value, desc:document.getElementById('pDesc').value||'Original', img:document.getElementById('pImg').value||'https://images.unsplash.com/photo-1594035910387-fea47794261f?w=400', seller:currentUser.shopName, city:currentUser.city, phone:currentUser.phone, sellerPhone:currentUser.phone, adminWhatsApp:siteSettings.adminWhatsApp, payments:currentUser.payments, payDetails:currentUser.payDetails, status:isAdmin?'approved':'pending'}; products.push(p); save(); renderProducts(); renderDash(); e.target.reset(); alert(isAdmin?'Published!':'Sent to Admin'); return false;}
+function deleteProd(idx){if(confirm('Delete?')){products.splice(idx,1); save(); renderProducts(); renderDash();}}
+function logout(){currentUser=null; confirmedAddress=''; save(); location.reload();}
+function addToCart(idx){cart.push(products[idx]); document.getElementById('cartCount').innerText=cart.length; openCart(); renderMenu();}
+function openCart(){
+closeAllPanels();
+document.getElementById('cartModal').classList.remove('hidden');
+if(cart.length===0){document.getElementById('cartItems').innerHTML='<p class="text-sm text-gray-400">Cart empty - Add from Home - Menu se My Cart me aaye ho to yahan edit hoga</p>'; return;}
+let total=cart.reduce((s,p)=>s+p.price,0); let comm=Math.round(total*siteSettings.commission/100);
+document.getElementById('cartItems').innerHTML=cart.map((p,i)=>`<div class="flex justify-between text-sm border-b py-3"><div><p class="font-bold">${p.name}</p><p class="text-[10px] text-[#C5A059]">S:${p.sellerPhone} A:${p.adminWhatsApp}</p></div><div class="flex items-center gap-2"><span>Rs ${p.price}</span><button onclick="cart.splice(${i},1); document.getElementById('cartCount').innerText=cart.length; openCart();" class="w-6 h-6 bg-red-100 text-red-600 rounded-full text-[10px]">X</button></div></div>`).join('');
+document.getElementById('subTotal').innerText='Rs '+total; document.getElementById('cartTotal').innerText='Rs '+(total+comm);
+document.getElementById('commissionPayBox').innerHTML=`Subtotal Rs ${total} + Commission ${siteSettings.commission}% Rs ${comm} = Total Rs ${total+comm}<br>Pay: ${siteSettings.accName} - ${siteSettings.accNumber}`;
+let allPays=[...new Set(cart.flatMap(p=>p.payments||['COD']))]; document.getElementById('payOptions').innerHTML=allPays.map(pay=>`<label class="flex items-center gap-2 text-sm border rounded-full px-4 py-2.5"><input type="radio" name="pay" value="${pay}" onchange="showPayDetails('${pay}')"> ${pay}</label>`).join('');
+let addrDisplay=document.getElementById('currentAddressDisplay'); let deliveryInput=document.getElementById('deliveryAddress'); let currentAddr = confirmedAddress || (currentUser? currentUser.address : '') || ''; if(addrDisplay) addrDisplay.innerText=currentAddr || 'No address'; if(deliveryInput) deliveryInput.value=currentAddr;
+}
+function confirmAddress(){let input=document.getElementById('deliveryAddress'); let val=input.value.trim(); if(!val){alert('Please enter address'); return;} confirmedAddress=val; if(currentUser){currentUser.address=val; let uIndex=users.findIndex(u=>u.email===currentUser.email); if(uIndex>=0) users[uIndex].address=val;} save(); document.getElementById('currentAddressDisplay').innerText=val; document.getElementById('addressStatus').classList.remove('hidden');}
+function changeAddress(){let input=document.getElementById('deliveryAddress'); let val=input.value.trim(); if(!val){alert('Enter new address'); return;} confirmedAddress=val; if(currentUser){currentUser.address=val; let uIndex=users.findIndex(u=>u.email===currentUser.email); if(uIndex>=0) users[uIndex].address=val;} save(); document.getElementById('currentAddressDisplay').innerText=val; document.getElementById('addressStatus').classList.remove('hidden');}
+function showPayDetails(pay){let d=cart[0]?.payDetails?.[pay]||''; document.getElementById('sellerPayDetails').classList.remove('hidden'); document.getElementById('sellerPayDetails').innerHTML=`<b>Seller:</b> ${cart[0].seller}<br><b>S WA:</b> ${cart[0].sellerPhone} | <b>A WA:</b> ${cart[0].adminWhatsApp}<br><b>${pay}:</b> ${d}`;}
+function closeCart(){document.getElementById('cartModal').classList.add('hidden');} function toggleWishlist(idx){if(wishlist.includes(idx)) wishlist=wishlist.filter(x=>x!==idx); else wishlist.push(idx); document.getElementById('wishCount').innerText=wishlist.length; renderProducts(); renderWishlist();} function openWishlist(){closeAllPanels(); document.getElementById('wishModal').classList.remove('hidden'); renderWishlist();} function closeWishlist(){document.getElementById('wishModal').classList.add('hidden');} function renderWishlist(){document.getElementById('wishItems').innerHTML=wishlist.map(i=>{let p=products[i]; return `<div class="flex gap-3 border-b py-3"><img src="${p.img}" class="w-16 h-16 rounded-xl object-cover"><div><p class="font-bold text-sm">${p.name}</p><p class="text-xs">Rs ${p.price}</p><button onclick="addToCart(${i})" class="text-xs bg-black text-white px-3 py-1 rounded-full mt-1">Add</button></div></div>`}).join('')||'<p class="text-sm text-gray-400">Wishlist empty</p>';}
+function openAdmin(){if(!currentUser||currentUser.email.toLowerCase()!==ADMIN_EMAIL.toLowerCase()){alert('Only Admin: '+ADMIN_EMAIL); return;} closeAllPanels(); document.getElementById('adminModal').classList.remove('hidden'); document.getElementById('currentAdminEmail').innerText=ADMIN_EMAIL; document.getElementById('adminPending').innerText=products.filter(p=>p.status==='pending').length; document.getElementById('adminTotalUsers').innerText=users.length; document.getElementById('adminCommission').innerText='Rs '+Math.round(products.filter(p=>p.status==='approved').reduce((s,p)=>s+p.price*siteSettings.commission/100,0)); applySiteSettings(); document.getElementById('adminPendingList').innerHTML=products.filter(p=>p.status==='pending').map(p=>{let idx=products.indexOf(p); return `<div class="border rounded-2xl p-4 flex gap-4 bg-white"><img src="${p.img}" class="w-20 h-20 rounded-xl"><div class="flex-1"><p class="font-bold text-sm">${p.name} Rs ${p.price} [${p.cat}]</p><p class="text-[11px]">Seller: ${p.seller} | S WA:${p.sellerPhone} A WA:${p.adminWhatsApp}</p><div class="grid grid-cols-2 gap-2 mt-2"><input id="admWA_${idx}" value="${p.adminWhatsApp||siteSettings.adminWhatsApp}" class="border rounded-full px-3 py-1.5 text-[11px]"><input id="sellWA_${idx}" value="${p.sellerPhone||p.phone}" class="border rounded-full px-3 py-1.5 text-[11px]"></div><div class="flex gap-2 mt-3"><button onclick="products[${idx}].adminWhatsApp=document.getElementById('admWA_${idx}').value; products[${idx}].sellerPhone=document.getElementById('sellWA_${idx}').value; products[${idx}].status='approved'; save(); openAdmin(); renderProducts();" class="bg-green-600 text-white px-5 py-2 rounded-full text-xs font-bold">Approve</button><button onclick="products.splice(${idx},1); save(); openAdmin(); renderProducts();" class="bg-red-100 text-red-600 px-5 py-2 rounded-full text-xs">Reject</button></div></div></div>`}).join('')||'<p class="text-xs">No pending</p>'; document.getElementById('adminUsersList').innerHTML=users.map((u,i)=>`<div class="border rounded-xl p-3 bg-gray-50 flex justify-between"><div><p class="font-bold text-sm">${u.name} ${u.blocked?'[BLOCKED]':'[ACTIVE]'} - ${u.role}</p><p class="text-[11px]">${u.email} | ${u.pass} | ${u.phone}</p><p class="text-[11px] font-bold text-[#C5A059]">Address: ${u.address||'No Address'}</p></div><div class="flex flex-col gap-1"><button onclick="users[${i}].blocked=!users[${i}].blocked;save();openAdmin()" class="bg-yellow-500 text-white px-3 py-1 rounded-full text-[10px]">${u.blocked?'Unblock':'Block'}</button><button onclick="let np=prompt('New Pass'); if(np){users[${i}].pass=np; save(); openAdmin();}" class="bg-blue-600 text-white px-3 py-1 rounded-full text-[10px]">Reset</button><button onclick="users.splice(${i},1);save();openAdmin()" class="bg-red-600 text-white px-3 py-1 rounded-full text-[10px]">Delete</button></div></div>`).join('')||'<p class="text-xs">No users</p>'; document.getElementById('adminAllProducts').innerHTML=products.filter(p=>p.status==='approved').map(p=>{let idx=products.indexOf(p); return `<div class="bg-white border rounded-2xl p-3"><img src="${p.img}" class="h-24 w-full object-cover rounded-xl"><p class="text-xs font-bold mt-2">${p.name}</p><p class="text-[10px] text-[#C5A059]">S:${p.sellerPhone} A:${p.adminWhatsApp}</p><div class="mt-2"><input id="editA_${idx}" value="${p.adminWhatsApp}" class="w-full border rounded-full px-2 py-1 text-[10px]"><input id="editS_${idx}" value="${p.sellerPhone}" class="w-full border rounded-full px-2 py-1 text-[10px] mt-1"><button onclick="products[${idx}].adminWhatsApp=document.getElementById('editA_${idx}').value; products[${idx}].sellerPhone=document.getElementById('editS_${idx}').value; save(); openAdmin(); renderProducts();" class="w-full bg-black text-white rounded-full py-1 text-[10px] mt-1">Update</button></div></div>`}).join('');}
+function closeAdmin(){document.getElementById('adminModal').classList.add('hidden');}
+function saveAllSettings(){siteSettings.name=document.getElementById('setSiteName').value.trim()||siteSettings.name; siteSettings.websiteUrl=document.getElementById('setWebsiteUrl').value.trim()||siteSettings.websiteUrl; siteSettings.logoText=document.getElementById('setLogoText').value.trim()||siteSettings.logoText; siteSettings.logoImg=document.getElementById('setLogoImg').value.trim(); siteSettings.heroTitle=document.getElementById('setHeroTitle').value.trim()||siteSettings.heroTitle; siteSettings.heroDesc=document.getElementById('setHeroDesc').value.trim()||siteSettings.heroDesc; siteSettings.heroImg=document.getElementById('setHeroImg').value.trim()||siteSettings.heroImg; siteSettings.theme=document.getElementById('setTheme').value; siteSettings.footer=document.getElementById('setFooter').value.trim()||siteSettings.footer; siteSettings.commission=parseFloat(document.getElementById('setCommission').value)||15; siteSettings.accName=document.getElementById('setAccName').value.trim()||siteSettings.accName; siteSettings.accNumber=document.getElementById('setAccNumber').value.trim()||siteSettings.accNumber; siteSettings.adminWhatsApp=document.getElementById('setAdminWhatsApp').value.trim()||siteSettings.adminWhatsApp; save(); applySiteSettings(); alert('✅ SAVED');}
+function changeAdminPass(){let np=document.getElementById('setNewPass').value.trim(); if(!np){alert('Password likho'); return;} let u=users.find(x=>x.email.toLowerCase()===ADMIN_EMAIL.toLowerCase()); if(u){u.pass=np; save(); alert('Admin Pass Changed: '+np);}}
+function transferOwnership(){let ne=document.getElementById('newOwnerEmail').value.toLowerCase().trim(); let np=document.getElementById('newOwnerPass').value.trim(); if(!ne||!np){alert('Fill both'); return;} ADMIN_EMAIL=ne; let ex=users.find(u=>u.email===ne); if(ex){ex.pass=np; ex.role='admin';} else {users.push({id:Date.now(),name:"New Owner",email:ne,pass:np,role:"admin",blocked:false});} save(); alert('Owner Changed to '+ne); logout();}
+function checkout(){
+let total=cart.reduce((s,p)=>s+p.price,0); let comm=Math.round(total*siteSettings.commission/100);
+let finalAddress = confirmedAddress || (currentUser? currentUser.address : '') || document.getElementById('deliveryAddress').value.trim();
+if(!finalAddress){alert('Please Confirm Address First'); openCart(); return;}
+let buyerName=currentUser? currentUser.name : 'Guest'; let buyerPhone=currentUser? currentUser.phone : ''; let buyerEmail=currentUser? currentUser.email : '';
+let payMethod=document.querySelector('input[name="pay"]:checked')?.value||'COD';
+let order={id:Date.now(), buyerEmail:buyerEmail, buyerName:buyerName, buyerPhone:buyerPhone, address:finalAddress, items:[...cart], total:total+comm, date:new Date().toLocaleString()};
+orders.push(order); save();
+let msg=`*${siteSettings.name}* - ${siteSettings.websiteUrl}%0A%0ANEW ORDER%0ABuyer: ${buyerName}%0APhone: ${buyerPhone}%0AEmail: ${buyerEmail}%0AAddress: ${finalAddress}%0A%0A${cart.map(p=>`• ${p.name} Rs ${p.price}`).join('%0A')}%0A%0ATotal Rs ${total+comm}%0APay: ${siteSettings.accName} ${siteSettings.accNumber} via ${payMethod}`;
+window.open(`https://wa.me/${siteSettings.adminWhatsApp.replace(/[^0-9]/g,'')}?text=${msg}`,'_blank'); cart=[]; document.getElementById('cartCount').innerText='0'; closeAllPanels(); renderBuyerDashboard();
+}
+applySiteSettings(); updateVisibility();
+if(users.length===0){ users.push({id:1,name:"Owner Admin",email:ADMIN_EMAIL,pass:"Admin@123",shopName:"AtrVault Owner",city:"Lahore",phone:"923046761516",address:"Lahore",role:"admin",blocked:false}); save(); }
+</script>
+</body>
+</html>
+
+<footer class="bg-[#0B0F1A] border-t border-[#C5A059]/20 text-center py-8 mt-10"><div class="max-w-7xl mx-auto px-4"><p id="footerText" class="text-[#C5A059] font-bold text-sm">© 2026 AtrVault.pk - Where Originality Meets Elegance ✨ - Rated 4.9/5</p><p class="text-white/50 text-[11px] mt-2 max-w-3xl mx-auto">100% Original Brands | Buyer Protection | Verified Sellers | Fast COD Delivery All Pakistan</p><p class="text-white/30 text-[10px] mt-4">Website: <span id="footerUrl">AtrVault.pk</span> | WA: <span id="footerWA">03340686649</span></p></div></footer>
